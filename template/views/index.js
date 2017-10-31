@@ -1,0 +1,1 @@
+export %SubSection% from './%sub-section%'
