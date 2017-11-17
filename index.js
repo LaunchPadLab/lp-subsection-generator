@@ -3,30 +3,44 @@
 const fs = require('fs-extra')
 const glob = require('glob')
 const camelCase = require('lodash.camelcase')
+const kebabCase = require('dashify')
 const path = require('path')
 
 function generate (subSectionName, destination) {
-  const packagePath = path.resolve(require.resolve('@launchpadlab/lp-subsection-generator'), '../')
+  // Compute all casings
+  const camelCaseName = camelCase(subSectionName)
+  const kebabCaseName = kebabCase(subSectionName)
+  const pascalCaseName = pascalCase(subSectionName)
+  // Compute paths
+  const packagePath = getPackagePath()
   const root = process.cwd()
+  // GENERATE
   console.log('Generating...')
   // Copy files over
-  fs.copySync(path.resolve(packagePath, './template'), path.resolve(packagePath, `./${ subSectionName }`))
+  fs.copySync(path.resolve(packagePath, './template'), path.resolve(packagePath, `./${ camelCaseName }`))
   // Replace template variables in files
-  const fileNames = glob.sync(path.resolve(packagePath, `./${ subSectionName }/**/*.js`))
-  fileNames.map(fileName => populateTemplateFile(fileName, subSectionName))
+  const allFiles = glob.sync(path.resolve(packagePath, `./${ camelCaseName }/**/*.js`))
+  allFiles.forEach(file => {
+    const template = fs.readFileSync(file, 'utf8')
+    const result = template
+      .replace(/%sub-section%/g, kebabCaseName)
+      .replace(/%SubSection%/g, pascalCaseName)
+    return fs.writeFileSync(file, result)
+  })
   // Rename view file
-  fs.renameSync(path.resolve(packagePath, `./${ subSectionName }/views/sub-section.js`), path.resolve(packagePath, `./${ subSectionName }/views/${ subSectionName }.js`))
+  fs.renameSync(path.resolve(packagePath, `./${ camelCaseName }/views/SubSection.js`), path.resolve(packagePath, `./${ camelCaseName }/views/${ pascalCaseName }.js`))
   // Move to final dest
-  fs.moveSync(path.resolve(packagePath, `./${ subSectionName }`), path.resolve(root, destination, subSectionName))
+  fs.moveSync(path.resolve(packagePath, `./${ camelCaseName }`), path.resolve(root, destination, camelCaseName))
   console.log('Done!')
 }
 
-function populateTemplateFile (fileName, kebabCaseName) {
-  const file = fs.readFileSync(fileName, 'utf8')
-  const result = file
-    .replace(/%sub-section%/g, kebabCaseName)
-    .replace(/%SubSection%/g, pascalCase(kebabCaseName))
-  return fs.writeFileSync(fileName, result)
+function getPackagePath () {
+  try {
+    return path.resolve(require.resolve('@launchpadlab/lp-subsection-generator'), '../')
+  } catch (e) {
+    console.log('Path not found, running locally')
+    return __dirname
+  }
 }
 
 function pascalCase (str) {
@@ -41,4 +55,4 @@ function main () {
   return generate(subSectionName, destination)
 }
 
-main()
+if (!module.parent) main()
