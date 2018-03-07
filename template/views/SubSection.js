@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 
@@ -17,7 +17,7 @@ function %SubSection% () {
 
 %SubSection%.defaultProps = defaultProps
 
-function mapStateToProps (state) {
+function mapStateToProps () {
   return {}
 }
 
