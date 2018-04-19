@@ -24,6 +24,7 @@ function generate (subSectionName, destination) {
     const template = fs.readFileSync(file, 'utf8')
     const result = template
       .replace(/%sub-section%/g, kebabCaseName)
+      .replace(/%subSection%/g, camelCaseName)
       .replace(/%SubSection%/g, pascalCaseName)
     return fs.writeFileSync(file, result)
   })
