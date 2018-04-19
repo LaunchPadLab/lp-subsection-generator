@@ -1,6 +1,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-import { compose } from 'redux'
+import { compose } from 'recompose'
 import { connect } from 'react-redux'
 
 const propTypes = {}
