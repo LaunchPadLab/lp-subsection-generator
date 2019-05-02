@@ -15,6 +15,7 @@ function Routes ({ match: { path } }) {
     <Layout>
       <Switch>
         <Route exact path={ path + '/' } component={ Views.%SubSection% } />
+        {/* <Route path={ path + '/:id' } component={ Views.%SubSection%Details } /> */}
       </Switch>
     </Layout>
   )

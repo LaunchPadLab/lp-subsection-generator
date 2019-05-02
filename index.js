@@ -52,7 +52,7 @@ function pascalCase (str) {
 function main () {
   const args = process.argv.slice(2)
   const subSectionName = args[0] || 'sub-section'
-  const destination = args[1] || './src'
+  const destination = args[1] || './src/js/main'
   return generate(subSectionName, destination)
 }
 
