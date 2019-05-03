@@ -1,3 +1,3 @@
 // import { createAction } from 'redux-actions'
 
-// export const setThing = createAction('SET_THING')
+// export const clear%SubSection% = createAction('CLEAR_%SUB_SECTION%')

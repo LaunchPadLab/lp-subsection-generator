@@ -2,21 +2,21 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
-// import { onMount, waitFor } from 'lp-hoc'
+// import { onMount, waitFor, connectParams } from 'lp-hoc'
 // import { selectors } from '../reducer'
 // import * as actions from '../actions'
 // import * as apiActions from 'api-actions'
 // import * as Types from 'types'
 
 const propTypes = {
-  // thing: Types.thing.isRequired
+  // %subSection%: Types.%subSection%.isRequired
 }
 
 const defaultProps = {}
 
 function %SubSection% () {
   return (
-    <div> This is the %SubSection% view! </div>
+    <div> This is the %SubSection% show view! </div>
   )
 }
 
@@ -26,17 +26,24 @@ function %SubSection% () {
 
 function mapStateToProps () {
   return {
-    // thing: selectors.thing(state)
+    // %subSection%: selectors.%subSection%(state)
   }
 }
 
 const mapDispatchToProps = {
-  // fetchThing: apiActions.fetchThing,
-  // setThing: actions.setThing
+  // fetch%SubSection%: apiActions.fetch%SubSection%,
+  // clear%SubSection%: actions.clear%SubSection%
 }
 
+// function onComponentDidMount ({ fetch%SubSection%, id }) {
+//   return fetch%SubSection%(id),
+// }
+
 export default compose(
+  // connectParams('id'),
   connect(mapStateToProps, mapDispatchToProps),
-  // onMount('fetchThing'),
-  // waitFor('thing'),
+  // withProps(modifyProps),
+  // onMount(onComponentDidMount),
+  // waitFor('%subSection%'),
+  // onUnmount('clear%SubSection%'),
 )(%SubSection%)
