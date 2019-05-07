@@ -1,12 +1,12 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
+// import * as Types from 'types'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
 // import { onMount, waitFor } from 'lp-hoc'
 // import { selectors } from '../reducer'
 // import * as actions from '../actions'
 // import * as apiActions from 'api-actions'
-// import * as Types from 'types'
 
 const propTypes = {
   // %subSections%: PropTypes.arrayOf(Types.%subSection%).isRequired,
