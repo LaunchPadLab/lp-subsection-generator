@@ -12,7 +12,7 @@ You can run the `generate-subsection` command using `yarn`:
 > yarn generate-subsection {section-name} {path}
 ```
 
-The `path` option should be the path to the directory where you'd like the subsection to be generated (ex. `./src/js/main/`).
+The `path` option should be the path to the directory where you'd like the subsection to be generated (optional, default=`./src/js/main/`).
 
 ## Contribution
 

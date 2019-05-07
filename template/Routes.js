@@ -14,7 +14,8 @@ function Routes ({ match: { path } }) {
   return (
     <Layout>
       <Switch>
-        <Route exact path={ path + '/' } component={ Views.%SubSection% } />
+        <Route exact path={ path + '/' } component={ Views.%SubSections% } />
+        <Route path={ path + '/:id' } component={ Views.%SubSection%Show } />
       </Switch>
     </Layout>
   )
