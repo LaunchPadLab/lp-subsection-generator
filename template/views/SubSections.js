@@ -1,20 +1,28 @@
-import React from 'react'
+import React /*, { useEffect } */ from 'react'
 // import PropTypes from 'prop-types'
 // import * as Types from 'types'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
-// import { onMount, waitFor } from 'lp-hoc'
+// import { Spinner } from 'lp-components'
 // import { selectors } from '../reducer'
 // import * as actions from '../actions'
 // import * as apiActions from 'api-actions'
 
 const propTypes = {
   // %subSections%: PropTypes.arrayOf(Types.%subSection%).isRequired,
+  // fetch%SubSections%: PropTypes.func.isRequired,
 }
 
 const defaultProps = {}
 
-function %SubSections% () {
+function %SubSections% (
+  // { 
+  //   %subSections%, 
+  //   fetch%SubSections%,
+  // }
+) {
+  // useEffect(() => { fetch%SubSections%() }, [])
+  // if (!%subSections%) return <Spinner />
   return (
     <div> This is the %SubSection% index view! </div>
   )
@@ -26,7 +34,7 @@ function %SubSections% () {
 
 function mapStateToProps () {
   return {
-    // %subSections%: selectors.%subSections%(state)
+    // %subSections%: selectors.%subSections%(state),
   }
 }
 
@@ -36,6 +44,4 @@ const mapDispatchToProps = {
 
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
-  // onMount('fetch%SubSections%'),
-  // waitFor('%subSection%'),
 )(%SubSections%)
