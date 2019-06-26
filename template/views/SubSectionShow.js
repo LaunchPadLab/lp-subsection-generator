@@ -1,20 +1,37 @@
-import React from 'react'
+import React /*, { useEffect } */ from 'react'
 // import PropTypes from 'prop-types'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
-// import { onMount, waitFor, connectParams } from 'lp-hoc'
+// import { Spinner } from 'lp-components'
+// import { connectParams } from 'lp-hoc'
 // import { selectors } from '../reducer'
 // import * as actions from '../actions'
 // import * as apiActions from 'api-actions'
 // import * as Types from 'types'
 
 const propTypes = {
-  // %subSection%: Types.%subSection%.isRequired
+  // id: PropTypes.number.isRequired,
+  // %subSection%: Types.%subSection%.isRequired,
+  // fetch%SubSection%: PropTypes.func.isRequired,
+  // clear%SubSection%: PropTypes.func.isRequired,
 }
 
 const defaultProps = {}
 
-function %SubSection% () {
+function %SubSection% (  
+  // { 
+  //   id,
+  //   %subSection%, 
+  //   fetch%SubSection%,
+  //   clear%SubSection%,
+  // }
+) {
+  // useEffect(() => { 
+  //  fetch%SubSection%(id)
+  //  // Cleanup
+  //  return () => clear%SubSection%()
+  // }, [ id ])
+  // if (!%subSection%) return <Spinner />
   return (
     <div> This is the %SubSection% show view! </div>
   )
@@ -35,15 +52,7 @@ const mapDispatchToProps = {
   // clear%SubSection%: actions.clear%SubSection%
 }
 
-// function onComponentDidMount ({ fetch%SubSection%, id }) {
-//   return fetch%SubSection%(id),
-// }
-
 export default compose(
   // connectParams('id'),
   connect(mapStateToProps, mapDispatchToProps),
-  // withProps(modifyProps),
-  // onMount(onComponentDidMount),
-  // waitFor('%subSection%'),
-  // onUnmount('clear%SubSection%'),
 )(%SubSection%)

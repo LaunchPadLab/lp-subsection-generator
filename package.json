@@ -1,6 +1,6 @@
 {
   "name": "@launchpadlab/lp-subsection-generator",
-  "version": "5.2.1",
+  "version": "6.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "eslint": "^4.11.0"
   },
   "peerDependencies": {
-    "react-router": "^4.0.0"
+    "react-router": "^4.0.0",
+    "react": "^16.8.0"
   }
 }
