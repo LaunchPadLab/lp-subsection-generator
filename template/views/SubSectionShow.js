@@ -11,14 +11,14 @@ import { connect } from 'react-redux'
 
 const propTypes = {
   // id: PropTypes.number.isRequired,
-  // %subSection%: Types.%subSection%.isRequired,
+  // %subSection%: Types.%subSection%,
   // fetch%SubSection%: PropTypes.func.isRequired,
   // clear%SubSection%: PropTypes.func.isRequired,
 }
 
 const defaultProps = {}
 
-function %SubSection% (  
+function %SubSection%Show (  
   // { 
   //   id,
   //   %subSection%, 
@@ -37,11 +37,11 @@ function %SubSection% (
   )
 }
 
-%SubSection%.propTypes = propTypes
+%SubSection%Show.propTypes = propTypes
 
-%SubSection%.defaultProps = defaultProps
+%SubSection%Show.defaultProps = defaultProps
 
-function mapStateToProps () {
+function mapStateToProps (/* state */) {
   return {
     // %subSection%: selectors.%subSection%(state)
   }
@@ -55,4 +55,4 @@ const mapDispatchToProps = {
 export default compose(
   // connectParams('id'),
   connect(mapStateToProps, mapDispatchToProps),
-)(%SubSection%)
+)(%SubSection%Show)
