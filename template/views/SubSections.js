@@ -32,7 +32,7 @@ function %SubSections% (
 
 %SubSections%.defaultProps = defaultProps
 
-function mapStateToProps () {
+function mapStateToProps (/* state */) {
   return {
     // %subSections%: selectors.%subSections%(state),
   }

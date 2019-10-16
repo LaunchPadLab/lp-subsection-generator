@@ -41,7 +41,7 @@ function %SubSection%Show (
 
 %SubSection%Show.defaultProps = defaultProps
 
-function mapStateToProps () {
+function mapStateToProps (/* state */) {
   return {
     // %subSection%: selectors.%subSection%(state)
   }
