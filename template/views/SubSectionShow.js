@@ -18,7 +18,7 @@ const propTypes = {
 
 const defaultProps = {}
 
-function %SubSection% (  
+function %SubSection%Show (  
   // { 
   //   id,
   //   %subSection%, 
@@ -37,9 +37,9 @@ function %SubSection% (
   )
 }
 
-%SubSection%.propTypes = propTypes
+%SubSection%Show.propTypes = propTypes
 
-%SubSection%.defaultProps = defaultProps
+%SubSection%Show.defaultProps = defaultProps
 
 function mapStateToProps () {
   return {
@@ -55,4 +55,4 @@ const mapDispatchToProps = {
 export default compose(
   // connectParams('id'),
   connect(mapStateToProps, mapDispatchToProps),
-)(%SubSection%)
+)(%SubSection%Show)
