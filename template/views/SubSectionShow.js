@@ -11,7 +11,7 @@ import { connect } from 'react-redux'
 
 const propTypes = {
   // id: PropTypes.number.isRequired,
-  // %subSection%: Types.%subSection%.isRequired,
+  // %subSection%: Types.%subSection%,
   // fetch%SubSection%: PropTypes.func.isRequired,
   // clear%SubSection%: PropTypes.func.isRequired,
 }

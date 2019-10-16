@@ -9,7 +9,7 @@ import { connect } from 'react-redux'
 // import * as apiActions from 'api-actions'
 
 const propTypes = {
-  // %subSections%: PropTypes.arrayOf(Types.%subSection%).isRequired,
+  // %subSections%: PropTypes.arrayOf(Types.%subSection%),
   // fetch%SubSections%: PropTypes.func.isRequired,
 }
 
