@@ -1,5 +1,7 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 
+const { Command } = require('commander')
 const fs = require('fs-extra')
 const glob = require('glob')
 const path = require('path')
@@ -7,7 +9,7 @@ const pluralize = require('pluralize')
 const { camelCase, kebabCase, flow, snakeCase, toUpper } = require('lodash')
 const screamingSnakeCase = flow(snakeCase, toUpper)
 
-function generate (subSectionName, destination) {
+function generate (subSectionName, destination, options) {
   // Compute all casings
   const singularName = pluralize.singular(subSectionName)
   const camelCaseName = camelCase(singularName)
@@ -17,10 +19,12 @@ function generate (subSectionName, destination) {
   // Compute paths
   const packagePath = getPackagePath()
   const root = process.cwd()
+  // Compute template based on the template type...
+  const templatePath = templatePathFromTemplateType(options.templateType)
   // GENERATE
   console.log('Generating...')
   // Copy files over
-  fs.copySync(path.resolve(packagePath, './template'), path.resolve(packagePath, `./${ subSectionName }`))
+  fs.copySync(path.resolve(packagePath, templatePath), path.resolve(packagePath, `./${ subSectionName }`))
   // Replace template variables in files
   const allFiles = glob.sync(path.resolve(packagePath, `./${ subSectionName }/**/*.js`))
   allFiles.forEach(file => {
@@ -58,11 +62,30 @@ function pascalCase (str) {
   return cased.charAt(0).toUpperCase() + cased.slice(1)
 }
 
+function templatePathFromTemplateType(templateType) {
+  switch(templateType) {
+    case "client": return './template'
+    case "ionic": return './ionic-template'
+
+    default:
+      throw new Error (`generate-subsection: [ERROR]: unknown template type [${templateType}]`)
+  }
+}
+
 function main () {
-  const args = process.argv.slice(2)
-  const subSectionName = args[0] || 'sub-section'
-  const destination = args[1] || './src/js/main'
-  return generate(subSectionName, destination)
+  const program = new Command
+
+  program
+    .description('generate a project subsection')
+    .version('6.1.0')
+    .option('-t, --template-type <client | ionic>', 'subsection template type', 'client')
+    .argument('[subsection-name]', 'name of the subsection', 'sub-section')
+    .argument('[destination]', 'optional project destination path', './src/js/main')
+    .action((subsectionName, destination, options) => {
+      generate(subsectionName, destination, options)
+    })
+
+  program.parse()
 }
 
 if (!module.parent) main()
