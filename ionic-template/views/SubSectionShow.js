@@ -2,7 +2,7 @@ import React /*, { useEffect } */ from 'react'
 // import PropTypes from 'prop-types'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
-// import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react'
 // import { LoadingModal } from 'components'
 // import { selectors } from '../reducer'
@@ -26,7 +26,7 @@ function %SubSection%Show (
   //   clear%SubSection%,
   // }
 ) {
-  // const { id } = useParams()
+  const { id } = useParams()
   //
   // useEffect(() => {
   //  fetch%SubSection%(id)
@@ -36,11 +36,11 @@ function %SubSection%Show (
   // if (!%subSection%) return <LoadingModal />
   return (
     <IonList>
-      <IonListHeader>&SubSections% Show View</IonListHeader>
+      <IonListHeader>%SubSections% Show View</IonListHeader>
       <IonItem>
         <IonLabel className="ion-text-wrap">
           <p>
-            This is the subsection template show view.
+            This is the %SubSections% show view for id: [{id}].
           </p>
         </IonLabel>
       </IonItem>

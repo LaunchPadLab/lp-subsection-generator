@@ -25,11 +25,11 @@ function %SubSections% (
   // if (!%subSections%) return <LoadingModal />
   return (
     <IonList>
-      <IonListHeader>&SubSections% Index View</IonListHeader>
+      <IonListHeader>%SubSections% Index View</IonListHeader>
       <IonItem>
         <IonLabel className="ion-text-wrap">
           <p>
-            This is the subsection template index view.
+            This is the %SubSections% index view.
           </p>
         </IonLabel>
       </IonItem>

@@ -54,6 +54,24 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@ionic/core@5.8.5":
+  version "5.8.5"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-5.8.5.tgz#c967fdfa6e554f63f90227c04d2821c758a680cb"
+  integrity sha512-KUT3kKcON606FBJBZcAZn2c62OfPhVR/LQO260FH3znUmpZbqD2/Zm1LOTCxluiG9H6UIe8TVo9n8BgsKxCygA==
+  dependencies:
+    "@stencil/core" "^2.4.0"
+    ionicons "^5.5.3"
+    tslib "^2.1.0"
+
+"@ionic/react@^5.0.0":
+  version "5.8.5"
+  resolved "https://registry.yarnpkg.com/@ionic/react/-/react-5.8.5.tgz#33d8a86a2d78c154e755fa6ddc436c74c2dffe4b"
+  integrity sha512-Egs/LK6g/yCAAvaGLridiHQLzHp1I/R0/fdZhiSrOVmg8dR0Ro45JUkhBZeteLNjwCY6YjzenCcStICFWQVKYQ==
+  dependencies:
+    "@ionic/core" "5.8.5"
+    ionicons "^5.1.2"
+    tslib "*"
+
 "@launchpadlab/eslint-config@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@launchpadlab/eslint-config/-/eslint-config-2.1.0.tgz#f6664cd86751632e07cf23a0bbba2d14cada1833"
@@ -63,6 +81,11 @@
     eslint-plugin-import "^2.8.0"
     eslint-plugin-jsx-a11y "^6.0.2"
     eslint-plugin-react "^7.4.0"
+
+"@stencil/core@^2.4.0", "@stencil/core@^2.5.0":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.10.0.tgz#acf44b9ae6578a20f0d09bf94296e833beadc885"
+  integrity sha512-15rWMTPQ/sp0lSV82HVCXkIya3QLN+uBl7pqK4JnTrp4HiLrzLmNbWjbvgCs55gw0lULbCIGbRIEsFz+Pe/Q+A==
 
 acorn-jsx@^3.0.0:
   version "3.0.1"
@@ -988,6 +1011,13 @@ invariant@^2.2.0:
   dependencies:
     loose-envify "^1.0.0"
 
+ionicons@^5.1.2, ionicons@^5.5.3:
+  version "5.5.3"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.5.3.tgz#33cfc4c8a590ac45895f2b10309ef4586ed244c1"
+  integrity sha512-L71djrMi8pAad66tpwdnO1vwcyluCFvehzxU1PpH1k/HpYBZhZ5IaYhqXipmqUvu5aEbd4cbRguYyI5Fd4bxTw==
+  dependencies:
+    "@stencil/core" "^2.5.0"
+
 is-absolute@^0.2.3:
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/is-absolute/-/is-absolute-0.2.6.tgz#20de69f3db942ef2d87b9c2da36f172235b1b5eb"
@@ -1751,6 +1781,11 @@ to-fast-properties@^2.0.0:
 tryit@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.3.tgz#393be730a9446fd1ead6da59a014308f36c289cb"
+
+tslib@*, tslib@^2.1.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 tty-browserify@0.0.0:
   version "0.0.0"
