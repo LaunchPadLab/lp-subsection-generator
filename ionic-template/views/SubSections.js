@@ -37,8 +37,11 @@ function %SubSections% (
         <IonLabel className="ion-text-wrap">
           <p>
             For Ionic projects you should favor using Ionic components over raw
-            HTML when possible. See https://ionicframework.com/docs/components
-            for the catalog of Ionic React components.
+            HTML when possible. See the{' '}
+            <a href="https://ionicframework.com/docs/components">
+              Ionic React Components documentation
+            </a>{' '}
+            for more information.
           </p>
         </IonLabel>
       </IonItem>

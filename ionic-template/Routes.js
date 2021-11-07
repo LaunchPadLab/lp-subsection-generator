@@ -1,5 +1,6 @@
 import React from 'react'
-import { Route, Switch, useRouteMatch } from 'react-router-dom'
+import { Route, useRouteMatch } from 'react-router-dom'
+import { IonRouterOutlet } from '@ionic/react'
 import * as Views from './views'
 import Layout from './Layout'
 
@@ -11,14 +12,14 @@ function Routes () {
 
   return (
     <Layout>
-      <Switch>
+      <IonRouterOutlet>
         <Route exact path={`${path}/`}>
           <Views.%SubSections% />
         </Route>
         <Route path={`${path}/:id`}>
           <Views.%SubSection%Show />
         </Route>
-      </Switch>
+      </IonRouterOutlet>
     </Layout>
   )
 }
