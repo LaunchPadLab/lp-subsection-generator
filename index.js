@@ -19,7 +19,6 @@ function generate (subSectionName, destination, options) {
   // Compute paths
   const packagePath = getPackagePath()
   const root = process.cwd()
-  // Compute template based on the template type...
   const templatePath = templatePathFromTemplateType(options.templateType)
   // GENERATE
   console.log('Generating...')
@@ -77,7 +76,7 @@ function main () {
 
   program
     .description('generate a project subsection')
-    .version('6.1.0')
+    .version(require('./package.json').version)
     .option('-t, --template-type <client | ionic>', 'subsection template type', 'client')
     .argument('[subsection-name]', 'name of the subsection', 'sub-section')
     .argument('[destination]', 'optional project destination path', './src/js/main')
