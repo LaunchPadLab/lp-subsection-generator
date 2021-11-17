@@ -1,6 +1,6 @@
 {
   "name": "@launchpadlab/lp-subsection-generator",
-  "version": "6.0.3",
+  "version": "6.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,11 +9,13 @@
     "lint": "eslint index.js"
   },
   "bin": {
-    "generate-subsection": "./index.js"
+    "generate-subsection": "./index.js",
+    "generate-ionic-subsection": "./index.js --template-type ionic"
   },
   "author": "dpikt",
   "license": "ISC",
   "dependencies": {
+    "commander": "^8.3.0",
     "fs-extra": "^4.0.2",
     "glob": "^7.1.2",
     "lodash": "^4.17.11",
@@ -24,7 +26,10 @@
     "eslint": "^4.11.0"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-router": "^4.0.0 || ^5.0.0"
+    "react": "^16.8.0 || ^17.0.0",
+    "react-router-dom": "^4.0.0 || ^5.0.0"
+  },
+  "optionalDependencies": {
+    "@ionic/react": "^5.0.0"
   }
 }

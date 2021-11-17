@@ -9,11 +9,14 @@ Remember to include your generated subsection in your top-level reducer and rout
 
 You can run the `generate-subsection` command using `yarn`:
 ```
-> yarn generate-subsection {section-name} {path}
+> yarn generate-subsection [options] [subsection-name] [destination]
 ```
 
-The `path` option should be the path to the directory where you'd like the subsection to be generated (optional, default=`./src/js/main/`).
+### Arguments
+  - `subsection-name`: the name of the subsection (optional, defaults to 'sub-section').
+  - `destination`: the relative path to the directory where you'd like the subsection to be generated (optional, defaults to `./src/js/main/`).
 
-## Contribution
-
-These docs are woefully inadequate and should be expanded at some point. PRs welcome!
+### Options
+  - `-V, --version`: the version number this utility
+  - `-t, --template-type <client | ionic>`: the subsection template type (default: "client")
+  - `-h, --help`: display help for command
