@@ -1,6 +1,6 @@
 {
   "name": "@launchpadlab/lp-subsection-generator",
-  "version": "6.1.0",
+  "version": "7.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "bin": {
     "generate-subsection": "./index.js",
-    "generate-ionic-subsection": "./index.js --template-type ionic"
+    "generate-ionic-subsection": "./ionic-index.js"
   },
   "author": "dpikt",
   "license": "ISC",
