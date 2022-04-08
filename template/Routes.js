@@ -1,21 +1,24 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Route, Switch } from 'react-router-dom'
+// import PropTypes from 'prop-types'
+import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import * as Views from './views'
 import Layout from './Layout'
 
-const propTypes = {
-  match: PropTypes.object.isRequired,
-}
-
+const propTypes = {}
 const defaultProps = {}
 
-function Routes ({ match: { path } }) {
+function Routes () {
+  const { path } = useRouteMatch()
+
   return (
     <Layout>
       <Switch>
-        <Route exact path={ path + '/' } component={ Views.%SubSections% } />
-        <Route path={ path + '/:id' } component={ Views.%SubSection%Show } />
+        <Route exact path={path}>
+          <Views.%SubSections% />
+        </Route>
+        <Route path={`${path}/:id`}>
+          <Views.%SubSection%Show />
+        </Route>
       </Switch>
     </Layout>
   )
