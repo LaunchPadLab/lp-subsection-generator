@@ -1,7 +1,6 @@
 import React /*, { useEffect } */ from 'react'
 // import PropTypes from 'prop-types'
-import { compose } from 'recompose'
-import { connect } from 'react-redux'
+import { compose, connect } from 'react-redux'
 // import { Spinner } from 'lp-components'
 // import { connectParams } from 'lp-hoc'
 // import { selectors } from '../reducer'
