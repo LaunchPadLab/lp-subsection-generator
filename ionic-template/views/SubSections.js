@@ -1,7 +1,7 @@
 import React /*, { useEffect } */ from 'react'
 // import PropTypes from 'prop-types'
 // import * as Types from 'types'
-import { compose } from 'recompose'
+import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react'
 // import { LoadingModal } from 'components'

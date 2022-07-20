@@ -1,6 +1,6 @@
 import React /*, { useEffect } */ from 'react'
 // import PropTypes from 'prop-types'
-import { compose } from 'recompose'
+import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react'
