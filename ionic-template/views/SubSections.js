@@ -10,7 +10,7 @@ import { IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react'
 // import * as apiActions from 'api-actions'
 
 const propTypes = {
-  // %subSections%: PropTypes.arrayOf(Types.%subSection%),
+  // %subSections%: PropTypes.arrayOf(Types.%SubSection%),
   // fetch%SubSections%: PropTypes.func.isRequired,
 }
 const defaultProps = {}
@@ -22,7 +22,9 @@ function %SubSections% (
   // }
 ) {
   // useEffect(() => { fetch%SubSections%() }, [])
+  //
   // if (!%subSections%) return <LoadingModal />
+  //
   return (
     <IonList>
       <IonListHeader>%SubSections% Index View</IonListHeader>

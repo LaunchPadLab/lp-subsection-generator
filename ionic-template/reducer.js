@@ -6,17 +6,13 @@ import { handleActions } from 'redux-actions'
 
 const reducerKey = '%subSection%'
 // const slice = 'root.%subSection%'
-
 const initialState = {}
-
 const reducer = handleActions({
   // [apiActions.fetch%SubSections%]: setOnSuccess('%subSections%'),
   // [apiActions.fetch%SubSection%]: setOnSuccess('%subSection%'),
   // [actions.clear%SubSection%]: unsetState('%subSection%'),
 }, initialState)
-
 // const select = selectorForSlice(slice)
-
 const selectors = {
   // %subSections%: select('%subSections%'),
   // %subSection%: select('%subSection%'),
