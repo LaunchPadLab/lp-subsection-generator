@@ -13,7 +13,7 @@ function Routes () {
   return (
     <Layout>
       <IonRouterOutlet>
-        <Route exact path={`${path}/`}>
+        <Route exact path={path}>
           <Views.%SubSections% />
         </Route>
         <Route path={`${path}/:id`}>
