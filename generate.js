@@ -26,6 +26,7 @@ function generate (subSectionName, destination, options) {
   allFiles.forEach(file => {
     const template = fs.readFileSync(file, 'utf8')
     const result = template
+      .replace(/%subsection%/g, subSectionName)
       .replace(/%sub-section%/g, kebabCaseName)
       .replace(/%subSection%/g, camelCaseName)
       .replace(/%SubSection%/g, pascalCaseName)

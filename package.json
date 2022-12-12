@@ -1,6 +1,6 @@
 {
   "name": "@launchpadlab/lp-subsection-generator",
-  "version": "7.1.1",
+  "version": "7.2.0",
   "description": "",
   "main": "index.js",
   "engines": {
@@ -18,24 +18,24 @@
   "author": "dpikt",
   "license": "ISC",
   "dependencies": {
-    "commander": "^8.3.0",
-    "fs-extra": "^4.0.2",
-    "glob": "^7.1.2",
+    "commander": "^9.4.1",
+    "fs-extra": "^11.1.0",
+    "glob": "^8.0.3",
     "lodash": "^4.17.11",
-    "pluralize": "^7.0.0"
+    "pluralize": "^8.0.0"
   },
   "devDependencies": {
     "@launchpadlab/eslint-config": "^2.1.0",
-    "eslint": "^4.11.0"
+    "eslint": "^7.32.0"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0",
-    "react-redux": "^7.2.8",
+    "react": ">= 16",
+    "react-redux": "^7.2.8 || ^8.0.0",
     "react-router-dom": "^4.0.0 || ^5.0.0",
     "redux": "^4.1.2",
     "redux-actions": "^2.6.5"
   },
   "optionalDependencies": {
-    "@ionic/react": "^5.0.0"
+    "@ionic/react": ">= 5"
   }
 }

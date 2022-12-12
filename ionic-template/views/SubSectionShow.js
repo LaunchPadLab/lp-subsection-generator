@@ -11,8 +11,7 @@ import { IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react'
 // import * as Types from 'types'
 
 const propTypes = {
-  // id: PropTypes.number.isRequired,
-  // %subSection%: Types.%subSection%,
+  // %subSection%: Types.%SubSection%,
   // fetch%SubSection%: PropTypes.func.isRequired,
   // clear%SubSection%: PropTypes.func.isRequired,
 }
@@ -20,7 +19,6 @@ const defaultProps = {}
 
 function %SubSection%Show (
   // {
-  //   id,
   //   %subSection%,
   //   fetch%SubSection%,
   //   clear%SubSection%,
@@ -33,7 +31,9 @@ function %SubSection%Show (
   //  // Cleanup
   //  return () => clear%SubSection%()
   // }, [ id ])
+  //
   // if (!%subSection%) return <LoadingModal />
+  //
   return (
     <IonList>
       <IonListHeader>%SubSections% Show View</IonListHeader>

@@ -9,27 +9,27 @@ import { connect } from 'react-redux'
 // import * as apiActions from 'api-actions'
 
 const propTypes = {
-  // %subSections%: PropTypes.arrayOf(Types.%subSection%),
+  // %subSections%: PropTypes.arrayOf(Types.%SubSection%),
   // fetch%SubSections%: PropTypes.func.isRequired,
 }
-
 const defaultProps = {}
 
 function %SubSections% (
-  // { 
-  //   %subSections%, 
+  // {
+  //   %subSections%,
   //   fetch%SubSections%,
   // }
 ) {
   // useEffect(() => { fetch%SubSections%() }, [])
+  //
   // if (!%subSections%) return <Spinner />
+  //
   return (
     <div> This is the %SubSection% index view! </div>
   )
 }
 
 %SubSections%.propTypes = propTypes
-
 %SubSections%.defaultProps = defaultProps
 
 function mapStateToProps (/* state */) {
