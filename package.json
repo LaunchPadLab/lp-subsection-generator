@@ -1,6 +1,6 @@
 {
   "name": "@launchpadlab/lp-subsection-generator",
-  "version": "7.2.0",
+  "version": "7.2.1",
   "description": "",
   "main": "index.js",
   "engines": {
