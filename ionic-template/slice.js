@@ -3,10 +3,8 @@ import { createSlice } from '@reduxjs/toolkit'
 // import * as apiActions from 'api-actions'
 // import { handleSuccess } from 'lp-redux-api'
 
-const initialState = {}
-
 export const name = '%subsection%'
-// const slicePath = `root.%subsection%`
+const initialState = {}
 
 const slice = createSlice({
   name,
@@ -32,7 +30,7 @@ const slice = createSlice({
   },
 })
 
-// const select = selectorForSlice(slicePath)
+// const select = selectorForSlice(`root.${name}`)
 export const selectors = {
   // %subSections%: select('%subSections%'),
   // %subSection%: select('%subSection%'),
