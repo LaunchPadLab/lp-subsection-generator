@@ -16,13 +16,13 @@ const slice = createSlice({
   },
   extraReducers: (/* builder */) => {
     // builder.addCase(
-    //   apiActions.fetch%SubSections%.toString(),
+    //   apiActions.fetch%SubSections%,
     //   handleSuccess((state, action) => {
     //     state.%subSections% = action.payload.data
     //   })
     // )
     // builder.addCase(
-    //   apiActions.fetch%SubSection%.toString(),
+    //   apiActions.fetch%SubSection%,
     //   handleSuccess((state, action) => {
     //     state.%subSection% = action.payload.data
     //   })
