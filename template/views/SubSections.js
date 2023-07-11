@@ -1,26 +1,19 @@
 import React /*, { useEffect } */ from 'react'
 // import PropTypes from 'prop-types'
 // import * as Types from 'types'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
+// import { useDispatch, useSelector } from 'react-redux'
 // import { Spinner } from 'lp-components'
-// import { selectors } from '../reducer'
-// import * as actions from '../actions'
+// import { selectors } from '../slice'
 // import * as apiActions from 'api-actions'
 
-const propTypes = {
-  // %subSections%: PropTypes.arrayOf(Types.%SubSection%),
-  // fetch%SubSections%: PropTypes.func.isRequired,
-}
+const propTypes = {}
 const defaultProps = {}
 
-function %SubSections% (
-  // {
-  //   %subSections%,
-  //   fetch%SubSections%,
-  // }
-) {
-  // useEffect(() => { fetch%SubSections%() }, [])
+function %SubSections% () {
+  // const dispatch = useDispatch()
+  // useEffect(() => {
+  //  dispatch(apiActions.fetch%SubSections%())
+  // }, [dispatch])
   //
   // if (!%subSections%) return <Spinner />
   //
@@ -32,16 +25,4 @@ function %SubSections% (
 %SubSections%.propTypes = propTypes
 %SubSections%.defaultProps = defaultProps
 
-function mapStateToProps (/* state */) {
-  return {
-    // %subSections%: selectors.%subSections%(state),
-  }
-}
-
-const mapDispatchToProps = {
-  // fetch%SubSections%: apiActions.fetch%SubSections%,
-}
-
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
-)(%SubSections%)
+export default %SubSections%

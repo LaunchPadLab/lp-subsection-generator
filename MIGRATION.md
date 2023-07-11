@@ -5,3 +5,5 @@ Version 7 of the lp-subsection-generator introduced the following changes that m
 1. Version 7 of the lp-subsection-generator requires that a Node version >= Node 12 be installed.
 1. The lp-subsection-generator argument `subsection-name` is now required. Previously, this argument was optional and would default to `sub-section`.
 
+## Migration to Version ^8.0.0
+Version 8 requires `@reduxjs/toolkit`, which is now standard across LPL's client templates.

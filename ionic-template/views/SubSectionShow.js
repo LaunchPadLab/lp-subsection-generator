@@ -1,46 +1,35 @@
 import React /*, { useEffect } */ from 'react'
 // import PropTypes from 'prop-types'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
+// import * as Types from 'types'
+// import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react'
 // import { LoadingModal } from 'components'
-// import { selectors } from '../reducer'
-// import * as actions from '../actions'
+// import { clear%SubSection%, selectors } from '../reducer'
 // import * as apiActions from 'api-actions'
-// import * as Types from 'types'
 
-const propTypes = {
-  // %subSection%: Types.%SubSection%,
-  // fetch%SubSection%: PropTypes.func.isRequired,
-  // clear%SubSection%: PropTypes.func.isRequired,
-}
+const propTypes = {}
 const defaultProps = {}
 
-function %SubSection%Show (
-  // {
-  //   %subSection%,
-  //   fetch%SubSection%,
-  //   clear%SubSection%,
-  // }
-) {
-  const { id } = useParams()
-  //
+function %SubSection%Show () {
+  // const { id } = useParams()
+  // const %subSection% = useSelector(selectors.%subSection%)
+  // const dispatch = useDispatch()
   // useEffect(() => {
-  //  fetch%SubSection%(id)
+  //  dispatch(apiActions.fetch%SubSection%(id))
   //  // Cleanup
-  //  return () => clear%SubSection%()
-  // }, [ id ])
+  //  return () => dispatch(clear%SubSection%())
+  // }, [dispatch, id])
   //
   // if (!%subSection%) return <LoadingModal />
   //
   return (
     <IonList>
-      <IonListHeader>%SubSections% Show View</IonListHeader>
+      <IonListHeader>%SubSection% Show View</IonListHeader>
       <IonItem>
         <IonLabel className="ion-text-wrap">
           <p>
-            This is the %SubSections% show view for id: [{id}].
+            This is the %SubSection% show view for id: [{id}].
           </p>
         </IonLabel>
       </IonItem>
@@ -63,17 +52,4 @@ function %SubSection%Show (
 %SubSection%Show.propTypes = propTypes
 %SubSection%Show.defaultProps = defaultProps
 
-function mapStateToProps (/* state */) {
-  return {
-    // %subSection%: selectors.%subSection%(state)
-  }
-}
-
-const mapDispatchToProps = {
-  // fetch%SubSection%: apiActions.fetch%SubSection%,
-  // clear%SubSection%: actions.clear%SubSection%
-}
-
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
-)(%SubSection%Show)
+export default %SubSection%Show

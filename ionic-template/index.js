@@ -1,2 +1,2 @@
 export { default as Routes } from './Routes'
-export { reducer, reducerKey } from './reducer'
+export { default as reducer, name as reducerKey } from './slice'

@@ -1,35 +1,25 @@
 import React /*, { useEffect } */ from 'react'
 // import PropTypes from 'prop-types'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
-import { useParams } from 'react-router-dom'
-// import { Spinner } from 'lp-components'
-// import { selectors } from '../reducer'
-// import * as actions from '../actions'
-// import * as apiActions from 'api-actions'
 // import * as Types from 'types'
+// import { useDispatch, useSelector } from 'react-redux'
+// import { useParams } from 'react-router-dom'
+// import { Spinner } from 'lp-components'
+// import { clear%SubSection%, selectors } from '../slice'
+// import * as apiActions from 'api-actions'
 
-const propTypes = {
-  // %subSection%: Types.%SubSection%,
-  // fetch%SubSection%: PropTypes.func.isRequired,
-  // clear%SubSection%: PropTypes.func.isRequired,
-}
+const propTypes = {}
 const defaultProps = {}
 
-function %SubSection%Show (
-  // {
-  //   %subSection%,
-  //   fetch%SubSection%,
-  //   clear%SubSection%,
-  // }
-) {
-  const { id } = useParams()
+function %SubSection%Show () {
+  // const { id } = useParams()
+  // const %subSection% = useSelector(selectors.%subSection%)
+  // const dispatch = useDispatch()
   //
   // useEffect(() => {
-  //  fetch%SubSection%(id)
+  //  dispatch(apiActions.fetch%SubSection%(id))
   //  // Cleanup
-  //  return () => clear%SubSection%()
-  // }, [ id ])
+  //  return () => dispatch(clear%SubSection%())
+  // }, [dispatch, id])
   //
   // if (!%subSection%) return <Spinner />
   //
@@ -41,17 +31,4 @@ function %SubSection%Show (
 %SubSection%Show.propTypes = propTypes
 %SubSection%Show.defaultProps = defaultProps
 
-function mapStateToProps (/* state */) {
-  return {
-    // %subSection%: selectors.%subSection%(state)
-  }
-}
-
-const mapDispatchToProps = {
-  // fetch%SubSection%: apiActions.fetch%SubSection%,
-  // clear%SubSection%: actions.clear%SubSection%
-}
-
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
-)(%SubSection%Show)
+export default %SubSection%Show
