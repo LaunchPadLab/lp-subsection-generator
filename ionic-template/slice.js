@@ -10,7 +10,7 @@ const slice = createSlice({
   name,
   initialState,
   reducers: {
-    // clear%SubSection% () {
+    // clear%SubSection% (state) {
     //   state.%subSection% = null
     // }
   },
