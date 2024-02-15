@@ -11,16 +11,18 @@ function Routes () {
   const { path } = useRouteMatch()
 
   return (
-    <Layout>
-      <IonRouterOutlet>
-        <Route exact path={path}>
+    <IonRouterOutlet>
+      <Route exact path={path}>
+        <Layout>
           <Views.%SubSections% />
-        </Route>
-        <Route path={`${path}/:id`}>
+        </Layout>
+      </Route>
+      <Route path={`${path}/:id`}>
+        <Layout>
           <Views.%SubSection%Show />
-        </Route>
-      </IonRouterOutlet>
-    </Layout>
+        </Layout>
+      </Route>
+    </IonRouterOutlet>
   )
 }
 
