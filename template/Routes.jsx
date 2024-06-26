@@ -1,7 +1,8 @@
 // import PropTypes from 'prop-types'
 import { Route, Switch, useRouteMatch } from 'react-router-dom'
-import * as Views from './views'
-import Layout from './Layout'
+import %SubSections% from './views/%SubSections%.jsx'
+import %SubSection%Show from './views/%SubSection%Show.jsx'
+import Layout from './Layout.jsx'
 
 const propTypes = {}
 const defaultProps = {}
