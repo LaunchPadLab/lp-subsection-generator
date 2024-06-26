@@ -14,10 +14,10 @@ function Routes () {
     <Layout>
       <Switch>
         <Route exact path={path}>
-          <Views.%SubSections% />
+          <%SubSections% />
         </Route>
         <Route path={`${path}/:id`}>
-          <Views.%SubSection%Show />
+          <%SubSection%Show />
         </Route>
       </Switch>
     </Layout>
