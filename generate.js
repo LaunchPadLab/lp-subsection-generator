@@ -22,7 +22,7 @@ function generate (subSectionName, destination, options) {
   // Copy files over
   fs.copySync(path.resolve(packagePath, templatePath), path.resolve(packagePath, `./${ subSectionName }`))
   // Replace template variables in files
-  const allFiles = glob.sync(path.resolve(packagePath, `./${ subSectionName }/**/*.js`))
+  const allFiles = glob.sync(path.resolve(packagePath, `./${ subSectionName }/**/*.{js,jsx}`))
   allFiles.forEach(file => {
     const template = fs.readFileSync(file, 'utf8')
     const result = template
@@ -38,8 +38,8 @@ function generate (subSectionName, destination, options) {
     return fs.writeFileSync(file, result)
   })
   // Rename view files
-  fs.renameSync(path.resolve(packagePath, `./${ subSectionName }/views/SubSections.js`), path.resolve(packagePath, `./${ subSectionName }/views/${ pluralize(pascalCaseName) }.js`))
-  fs.renameSync(path.resolve(packagePath, `./${ subSectionName }/views/SubSectionShow.js`), path.resolve(packagePath, `./${ subSectionName }/views/${ pascalCaseName }Show.js`))
+  fs.renameSync(path.resolve(packagePath, `./${ subSectionName }/views/SubSections.jsx`), path.resolve(packagePath, `./${ subSectionName }/views/${ pluralize(pascalCaseName) }.jsx`))
+  fs.renameSync(path.resolve(packagePath, `./${ subSectionName }/views/SubSectionShow.jsx`), path.resolve(packagePath, `./${ subSectionName }/views/${ pascalCaseName }Show.jsx`))
   // Move to final dest
   fs.moveSync(path.resolve(packagePath, `./${ subSectionName }`), path.resolve(root, destination, subSectionName))
   console.log('Done!')
