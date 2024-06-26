@@ -1,4 +1,3 @@
-import React from 'react'
 // import PropTypes from 'prop-types'
 import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import * as Views from './views'
