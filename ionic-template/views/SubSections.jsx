@@ -1,35 +1,31 @@
-import React /*, { useEffect } */ from 'react'
+// import { useEffect } from 'react'
 // import PropTypes from 'prop-types'
-// import * as Types from 'types'
+// import * as Types from '@/main/types.js'
 // import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
 import { IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react'
-// import { LoadingModal } from 'components'
-// import { clear%SubSection%, selectors } from '../reducer'
-// import * as apiActions from 'api-actions'
+// import LoadingModal from '@/components/LoadingModal.jsx'
+// import { selectors } from '../slice.js'
+// import * as apiActions from '@/main/apiActions.js'
 
 const propTypes = {}
 const defaultProps = {}
 
-function %SubSection%Show () {
-  // const { id } = useParams()
-  // const %subSection% = useSelector(selectors.%subSection%)
+function %SubSections% () {
+  // const %subSections% = useSelector(selectors.%subSections%)
   // const dispatch = useDispatch()
   // useEffect(() => {
-  //  dispatch(apiActions.fetch%SubSection%(id))
-  //  // Cleanup
-  //  return () => dispatch(clear%SubSection%())
-  // }, [dispatch, id])
+  //  dispatch(apiActions.fetch%SubSections%())
+  // }, [dispatch])
   //
-  // if (!%subSection%) return <LoadingModal />
+  // if (!%subSections%) return <LoadingModal />
   //
   return (
     <IonList>
-      <IonListHeader>%SubSection% Show View</IonListHeader>
+      <IonListHeader>%SubSections% Index View</IonListHeader>
       <IonItem>
         <IonLabel className="ion-text-wrap">
           <p>
-            This is the %SubSection% show view for id: [{id}].
+            This is the %SubSections% index view.
           </p>
         </IonLabel>
       </IonItem>
@@ -45,11 +41,11 @@ function %SubSection%Show () {
           </p>
         </IonLabel>
       </IonItem>
-  </IonList>
+    </IonList>
   )
 }
 
-%SubSection%Show.propTypes = propTypes
-%SubSection%Show.defaultProps = defaultProps
+%SubSections%.propTypes = propTypes
+%SubSections%.defaultProps = defaultProps
 
-export default %SubSection%Show
+export default %SubSections%

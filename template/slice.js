@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
-// import { selectorForSlice } from 'lp-redux-utils'
-// import * as apiActions from 'api-actions'
-// import { handleSuccess } from 'lp-redux-api'
+// import { selectorForSlice } from '@launchpadlab/lp-redux-utils'
+// import { handleSuccess } from '@launchpadlab/lp-redux-api'
+// import * as apiActions from '@/main/apiActions.js'
 
 export const name = '%subsection%'
 const initialState = {}

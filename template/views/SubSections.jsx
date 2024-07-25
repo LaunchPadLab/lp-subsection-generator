@@ -1,10 +1,10 @@
-import React /*, { useEffect } */ from 'react'
+// import { useEffect } from 'react'
 // import PropTypes from 'prop-types'
-// import * as Types from 'types'
+// import * as Types from '@/main/types.js'
 // import { useDispatch, useSelector } from 'react-redux'
-// import { Spinner } from 'lp-components'
-// import { selectors } from '../slice'
-// import * as apiActions from 'api-actions'
+// import { Spinner } from '@launchpadlab/lp-components'
+// import { selectors } from '../slice.js'
+// import * as apiActions from '@/main/apiActions.js'
 
 const propTypes = {}
 const defaultProps = {}

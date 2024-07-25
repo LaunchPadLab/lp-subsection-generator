@@ -1,8 +1,8 @@
-import React from 'react'
 import { Route, useRouteMatch } from 'react-router-dom'
 import { IonRouterOutlet } from '@ionic/react'
-import * as Views from './views'
-import Layout from './Layout'
+import %SubSections% from './views/%SubSections%.jsx'
+import %SubSection%Show from './views/%SubSection%Show.jsx'
+import Layout from './Layout.jsx'
 
 const propTypes = {}
 const defaultProps = {}
@@ -14,10 +14,10 @@ function Routes () {
     <Layout>
       <IonRouterOutlet>
         <Route exact path={path}>
-          <Views.%SubSections% />
+          <%SubSections% />
         </Route>
         <Route path={`${path}/:id`}>
-          <Views.%SubSection%Show />
+          <%SubSection%Show />
         </Route>
       </IonRouterOutlet>
     </Layout>
