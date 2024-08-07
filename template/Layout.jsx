@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 const propTypes = {
   children: PropTypes.node.isRequired,
 }
-const defaultProps = {}
 
 function Layout ({ children }) {
   return (
@@ -14,6 +13,5 @@ function Layout ({ children }) {
 }
 
 Layout.propTypes = propTypes
-Layout.defaultProps = defaultProps
 
 export default Layout
