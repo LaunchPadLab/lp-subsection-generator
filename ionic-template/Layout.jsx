@@ -5,7 +5,6 @@ import Header from '@/components/Header.jsx'
 const propTypes = {
   children: PropTypes.node.isRequired,
 }
-const defaultProps = {}
 
 // This default layout can be tailored for each page. For example, if a back button is
 // needed in the header for this page, add the "withBackButton" prop to the <Header>
@@ -20,6 +19,5 @@ function Layout({ children }) {
 }
 
 Layout.propTypes = propTypes
-Layout.defaultProps = defaultProps
 
 export default Layout

@@ -8,7 +8,6 @@ import { IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react'
 // import * as apiActions from '@/main/apiActions.js'
 
 const propTypes = {}
-const defaultProps = {}
 
 function %SubSections% () {
   // const %subSections% = useSelector(selectors.%subSections%)
@@ -46,6 +45,5 @@ function %SubSections% () {
 }
 
 %SubSections%.propTypes = propTypes
-%SubSections%.defaultProps = defaultProps
 
 export default %SubSections%
