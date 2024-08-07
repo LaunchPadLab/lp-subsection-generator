@@ -11,7 +11,7 @@ import { IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react'
 const propTypes = {}
 
 function %SubSection%Show () {
-  // const { id } = useParams()
+  const { id } = useParams()
   // const %subSection% = useSelector(selectors.%subSection%)
   // const dispatch = useDispatch()
   // useEffect(() => {
