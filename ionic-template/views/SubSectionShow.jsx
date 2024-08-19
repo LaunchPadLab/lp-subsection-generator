@@ -9,10 +9,9 @@ import { IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react'
 // import * as apiActions from '@/main/apiActions.js'
 
 const propTypes = {}
-const defaultProps = {}
 
 function %SubSection%Show () {
-  // const { id } = useParams()
+  const { id } = useParams()
   // const %subSection% = useSelector(selectors.%subSection%)
   // const dispatch = useDispatch()
   // useEffect(() => {
@@ -50,6 +49,5 @@ function %SubSection%Show () {
 }
 
 %SubSection%Show.propTypes = propTypes
-%SubSection%Show.defaultProps = defaultProps
 
 export default %SubSection%Show

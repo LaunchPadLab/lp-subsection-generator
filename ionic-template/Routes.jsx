@@ -5,7 +5,6 @@ import %SubSection%Show from './views/%SubSection%Show.jsx'
 import Layout from './Layout.jsx'
 
 const propTypes = {}
-const defaultProps = {}
 
 function Routes () {
   const { path } = useRouteMatch()
@@ -25,6 +24,5 @@ function Routes () {
 }
 
 Routes.propTypes = propTypes
-Routes.defaultProps = defaultProps
 
 export default Routes
