@@ -8,7 +8,7 @@ import Layout from './Layout.jsx'
 
 const propTypes = {}
 
-function Routes () {
+function %SubSection%Routes () {
   return (
     <Routes>
       <Route element={<Layout />}>
@@ -20,6 +20,6 @@ function Routes () {
   )
 }
 
-Routes.propTypes = propTypes
+%SubSection%Routes.propTypes = propTypes
 
-export default Routes
+export default %SubSection%Routes
