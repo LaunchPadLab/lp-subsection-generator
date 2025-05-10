@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@launchpadlab/eslint-config": "^2.1.0",
+    "@launchpadlab/prettier-config": "^2.0.1",
     "eslint": "^7.32.0"
   },
   "peerDependencies": {

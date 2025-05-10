@@ -1,15 +1,9 @@
-import PropTypes from 'prop-types'
+import { Outlet } from 'react-router-dom'
 
-const propTypes = {
-  children: PropTypes.node.isRequired,
-}
+const propTypes = {}
 
-function Layout ({ children }) {
-  return (
-    <div>
-      { children }
-    </div>
-  )
+function Layout() {
+	return <Outlet />
 }
 
 Layout.propTypes = propTypes
